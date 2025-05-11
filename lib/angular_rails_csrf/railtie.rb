@@ -12,9 +12,11 @@ module AngularRailsCsrf
 
     initializer 'angular-rails-csrf.deprecation_notice' do |_app|
       unless Rails.env.test? || ENV['ANGULAR_RAILS_CSRF_SILENCE']
-        ActiveSupport::Deprecation.warn(
+        AngularRailsCsrf.deprecator.warn(
           '[angular_rails_csrf] This gem is under passive maintenance and may be sunset in the future. ' \
-          'Open an issue if you rely on it and want it to live on: https://github.com/bodrovis/angular_rails_csrf/issues'
+          'Open an issue if you rely on it and want it to live on: ' \
+          'https://github.com/bodrovis/angular_rails_csrf/issues. ' \
+          'Set ANGULAR_RAILS_CSRF_SILENCE to silence this warning.'
         )
       end
     end
