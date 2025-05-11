@@ -1,8 +1,24 @@
 ## AngularJS-style CSRF Protection for Rails
 
 ![Gem](https://img.shields.io/gem/v/angular_rails_csrf)
-![CI](https://github.com/jsanders/angular_rails_csrf/actions/workflows/ci.yml/badge.svg)
+![CI](https://github.com/bodrovis/angular_rails_csrf/actions/workflows/ci.yml/badge.svg)
 ![Downloads total](https://img.shields.io/gem/dt/angular_rails_csrf)
+
+**Deprecation notice (2025)**
+
+James and then me (@bodrovis) have been supporting this gem since 2013. It has been downloaded more than 10 million times and we're glad you guys found it useful. However, after discussing privately we've decided to put angular_rails_csrf under passive maintenance starting from June 2025.
+
+In modern frontend–backend architectures (e.g., Angular, React, Vue + Rails APIs), CSRF protection is typically handled via token-based authentication (JWT, OAuth) and not via CSRF cookies. This gem remains relevant only for Rails monoliths that:
+
+- Use cookie-based session auth
+- Serve frontend via Rails
+- Expect `XSRF-TOKEN` / `X-XSRF-TOKEN` pattern
+
+If you're actively using this gem and want to see it maintained or enhanced, please [open an issue](https://github.com/bodrovis/angular_rails_csrf/issues) describing your use case.
+
+Otherwise, this project may be archived in late 2025 or 2026. Thank you!
+
+---
 
 The AngularJS [ng.$http](http://docs.angularjs.org/api/ng.$http) service has built-in CSRF protection. By default, it looks for a cookie named `XSRF-TOKEN` and, if found, writes its value into an `X-XSRF-TOKEN` header, which the server compares with the CSRF token saved in the user's session.
 
@@ -10,7 +26,7 @@ This project adds direct support for this scheme to your Rails application witho
 
 Note that there is nothing AngularJS specific here, and this will work with any other front-end that implements the same scheme.
 
-Check [version compatibility](https://github.com/jsanders/angular_rails_csrf/wiki/Version-Compatibility) to learn which Rails/Rubies are currently supported.
+Check [version compatibility](https://github.com/bodrovis/angular_rails_csrf/wiki/Version-Compatibility) to learn which Rails/Rubies are currently supported.
 
 ## Installation
 
@@ -102,7 +118,7 @@ end
 
 ### Exclusions
 
-Sometimes you will want to skip setting the XSRF token for certain controllers (for example, when using SSE or ActionCable, as discussed [here](https://github.com/jsanders/angular_rails_csrf/issues/7)):
+Sometimes you will want to skip setting the XSRF token for certain controllers (for example, when using SSE or ActionCable, as discussed [here](https://github.com/bodrovis/angular_rails_csrf/issues/7)):
 
 ```ruby
 class ExclusionsController < ApplicationController
@@ -128,4 +144,4 @@ $ rake test
 
 ## License
 
-Licensed under the [MIT License](https://github.com/jsanders/angular_rails_csrf/blob/master/LICENSE).
+Licensed under the [MIT License](https://github.com/bodrovis/angular_rails_csrf/blob/master/LICENSE).

@@ -1,5 +1,11 @@
 # Changelog
 
+## 7.0.1 (11-May-25)
+
+* Test with Ruby 3.4
+* Repo moved
+* Add deprecation message
+
 ## 7.0.0 (12-Nov-24)
 
 * **Breaking change**: require Ruby 3.2+. If you need support for older Rubies, stay on version 6

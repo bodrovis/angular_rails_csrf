@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
   s.version     = AngularRailsCsrf::VERSION
   s.authors     = ['James Sanders', 'Ilya Krukowski']
   s.email       = ['sanderjd@gmail.com', 'golosizpru@gmail.com']
-  s.homepage    = 'https://github.com/jsanders/angular_rails_csrf'
+  s.homepage    = 'https://github.com/bodrovis/angular_rails_csrf'
   s.summary     = 'Support for AngularJS $http service style CSRF protection in Rails'
   s.description = 'AngularJS style CSRF protection for Rails'
   s.license     = 'MIT'
@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_dependency 'railties', '>= 3', '< 9'
 
   s.metadata = {
-    'rubygems_mfa_required' => 'true'
+    'rubygems_mfa_required' => 'true',
+    'deprecation_warning' => 'Passive maintenance; may be sunset in 2025-2026. See README.'
   }
 end
