@@ -4,7 +4,7 @@
 ![CI](https://github.com/bodrovis/angular_rails_csrf/actions/workflows/ci.yml/badge.svg)
 ![Downloads total](https://img.shields.io/gem/dt/angular_rails_csrf)
 
-**Deprecation notice (2025)**
+**This gem is in passive maintenance mode:**
 
 James and then me (@bodrovis) have been supporting this gem since 2013. It has been downloaded more than 10 million times and we're glad you guys found it useful. However, after discussing privately we've decided to put angular_rails_csrf under passive maintenance starting from June 2025.
 
@@ -13,10 +13,6 @@ In modern frontend–backend architectures (e.g., Angular, React, Vue + Rails AP
 - Use cookie-based session auth
 - Serve frontend via Rails
 - Expect `XSRF-TOKEN` / `X-XSRF-TOKEN` pattern
-
-If you're actively using this gem and want to see it maintained or enhanced, please [open an issue](https://github.com/bodrovis/angular_rails_csrf/issues) describing your use case.
-
-Otherwise, this project may be archived in late 2025 or 2026. Thank you!
 
 ---
 

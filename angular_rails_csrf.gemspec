@@ -21,7 +21,6 @@ Gem::Specification.new do |s|
   s.add_dependency 'railties', '>= 3', '< 9'
 
   s.metadata = {
-    'rubygems_mfa_required' => 'true',
-    'deprecation_warning' => 'Passive maintenance; may be sunset in 2025-2026. See README.'
+    'rubygems_mfa_required' => 'true'
   }
 end
