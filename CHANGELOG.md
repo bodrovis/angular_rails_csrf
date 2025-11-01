@@ -1,5 +1,10 @@
 # Changelog
 
+## 7.0.2 (01-Nov-25)
+
+* Test with Ruby 3.5
+* Remove deprecation message, put into passive maintenance mode
+
 ## 7.0.1 (11-May-25)
 
 * Test with Ruby 3.4
