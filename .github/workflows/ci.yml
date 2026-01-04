@@ -19,8 +19,7 @@ jobs:
           - 3.2
           - 3.3
           - 3.4
-          - '3.5.0-preview1'
-          - '4.0.0-preview2'
+          - 4.0
     runs-on: ${{ matrix.os }}
     env:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
