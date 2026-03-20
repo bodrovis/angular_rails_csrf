@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.push File.expand_path('lib', __dir__)
+$LOAD_PATH.unshift File.expand_path('lib', __dir__)
 
 require 'angular_rails_csrf/version'
 
@@ -14,13 +14,18 @@ Gem::Specification.new do |s|
   s.description = 'AngularJS style CSRF protection for Rails'
   s.license     = 'MIT'
 
-  s.files = Dir['lib/**/*', 'LICENSE.md', 'Rakefile', 'README.md', 'CHANGELOG.md']
+  s.files = Dir['lib/**/*.rb', 'LICENSE.md', 'README.md', 'CHANGELOG.md', 'angular_rails_csrf.gemspec']
+  s.require_paths = ['lib']
 
   s.required_ruby_version = '>= 3.2'
 
   s.add_dependency 'railties', '>= 3', '< 9'
 
   s.metadata = {
-    'rubygems_mfa_required' => 'true'
+    'rubygems_mfa_required' => 'true',
+    'bug_tracker_uri' => 'https://github.com/bodrovis/angular_rails_csrf/issues',
+    'changelog_uri' => 'https://github.com/bodrovis/angular_rails_csrf/blob/master/CHANGELOG.md',
+    'documentation_uri' => 'https://github.com/bodrovis/angular_rails_csrf/blob/master/README.md',
+    'homepage_uri' => s.homepage
   }
 end
