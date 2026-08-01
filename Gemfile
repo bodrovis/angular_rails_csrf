@@ -9,7 +9,7 @@ group :test do
   gem 'rake', '~> 13.0'
   gem 'rubocop', '~> 1.0'
   gem 'rubocop-performance', '~> 1.5'
-  gem 'simplecov', '~> 0.16'
+  gem 'simplecov', '~> 1.0'
   gem 'test-unit', '~> 3.2'
   gem 'tzinfo-data', platforms: %i[windows jruby]
 end
