@@ -4,8 +4,8 @@ ENV['RAILS_ENV'] = 'test'
 
 require 'simplecov'
 SimpleCov.start do
-  add_filter 'test/'
-  add_filter '.github/'
+  skip 'test/'
+  skip '.github/'
 end
 
 require File.expand_path('dummy/config/environment.rb', __dir__)
