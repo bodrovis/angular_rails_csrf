@@ -2,6 +2,8 @@
 
 ![Gem](https://img.shields.io/gem/v/angular_rails_csrf)
 ![CI](https://github.com/bodrovis/angular_rails_csrf/actions/workflows/ci.yml/badge.svg)
+[![Code Coverage](https://qlty.sh/gh/bodrovis/projects/angular_rails_csrf/coverage.svg)](https://qlty.sh/gh/bodrovis/projects/angular_rails_csrf)
+[![Maintainability](https://qlty.sh/gh/bodrovis/projects/angular_rails_csrf/maintainability.svg)](https://qlty.sh/gh/bodrovis/projects/angular_rails_csrf)
 ![Downloads total](https://img.shields.io/gem/dt/angular_rails_csrf)
 
 **This gem is in passive maintenance mode:**
