@@ -25,9 +25,17 @@ jobs:
       BUNDLE_GEMFILE: ${{ matrix.gemfile }}
     steps:
     - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1
+      with:
+        persist-credentials: false
     - name: Set up Ruby
       uses: ruby/setup-ruby@95ef2b042f9d7a56d8268cba8559e2842e2ad01b
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
     - run: bundle exec rake test
+
+    - uses: qltysh/qlty-action/coverage@08a0a862c159eae9b9003081da6663d96efef637
+      if: matrix.ruby == '4.0' && matrix.gemfile == 'Gemfile'
+      with:
+        token: ${{ secrets.QLTY_COVERAGE_TOKEN }}
+        files: coverage/.resultset.json
