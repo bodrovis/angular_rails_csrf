@@ -1,8 +1,6 @@
 # frozen_string_literal: true
 
-$LOAD_PATH.unshift File.expand_path('lib', __dir__)
-
-require 'angular_rails_csrf/version'
+require_relative 'lib/angular_rails_csrf/version'
 
 Gem::Specification.new do |s|
   s.name        = 'angular_rails_csrf'
@@ -19,7 +17,7 @@ Gem::Specification.new do |s|
 
   s.required_ruby_version = '>= 3.2'
 
-  s.add_dependency 'railties', '>= 3', '< 9'
+  s.add_dependency 'railties', '>= 7', '< 9'
 
   s.metadata = {
     'rubygems_mfa_required' => 'true',

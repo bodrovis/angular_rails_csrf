@@ -1,5 +1,10 @@
 # Changelog
 
+## 8.0.0 (31-Aug-26)
+
+* Test with Ruby 4
+* Drop support for Rails 6 and below
+
 ## 7.0.2 (01-Nov-25)
 
 * Test with Ruby 3.5

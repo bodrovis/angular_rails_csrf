@@ -20,8 +20,8 @@ module AngularRailsCsrf
       cookies[cookie_name] = cookie_options_from(config)
     end
 
-    def verified_request?
-      super || valid_authenticity_token?(session, request.headers['X-XSRF-TOKEN'])
+    def request_authenticity_tokens
+      [*super, request.headers['X-XSRF-TOKEN']]
     end
 
     private
@@ -44,7 +44,7 @@ module AngularRailsCsrf
     def option_from(config, option, default = nil)
       return default if config.nil?
 
-      config.respond_to?(option) ? config.send(option) : default
+      config.respond_to?(option) ? config.public_send(option) : default
     end
 
     def forgery_protection_enabled?
