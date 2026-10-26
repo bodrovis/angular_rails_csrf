@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :test do
-  gem 'rails', '~> 8.0'
+  gem 'rails', '~> 8.1'
   gem 'rake', '~> 13.0'
   gem 'rubocop', '~> 1.0'
   gem 'rubocop-performance', '~> 1.5'
